@@ -17,9 +17,6 @@ app.use(helmet({
 }))
 
 
-app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
-});
 
 app.get('/', (req, res) => {
     res.send(
@@ -44,6 +41,11 @@ app.get('/profile', (req, res) => {
     .catch(console.log());
     // req.query.code;
    
+});
+
+
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
 });
 
 
