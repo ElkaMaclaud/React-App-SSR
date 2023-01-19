@@ -52,7 +52,7 @@ module.exports = {
         ],
     },
     optimization: {
-        minimize: false,
+        minimize: true,
     },
     devtool: IS_DEV ? 'eval' : false,
     plugins: [ new DefinePlugin ({'process.env.CLIENT_ID':  `'${process.env.CLIENT_ID}'` }) ]
