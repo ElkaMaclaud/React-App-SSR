@@ -16,6 +16,11 @@ app.use(helmet({
     contentSecurityPolicy: false,
 }))
 
+
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
+});
+
 app.get('/', (req, res) => {
     res.send(
         indexTemplate(ReactDOM.renderToString(App()))
@@ -41,9 +46,6 @@ app.get('/profile', (req, res) => {
    
 });
 
-app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
-});
 
 // axios.fetch(
 //     'https://www.reddit.com/api/v1/access_token',

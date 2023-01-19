@@ -1133,12 +1133,16 @@ var external_helmet_default = /*#__PURE__*/__webpack_require__.n(external_helmet
 
 
 
+const PORT = process.env.PORT || 3000;
 const app = external_express_default()();
 app.use('/public', external_express_default()["static"]('./build/client'));
 app.use(external_compression_default()());
 app.use(external_helmet_default()({
     contentSecurityPolicy: false,
 }));
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
+});
 app.get('/', (req, res) => {
     res.send(indexTemplate(server_default().renderToString(App())));
 });
@@ -1152,9 +1156,6 @@ app.get('/profile', (req, res) => {
     })
         .catch(console.log());
     // req.query.code;
-});
-app.listen(3000, () => {
-    console.log('Server started on http://localhost:3000');
 });
 // axios.fetch(
 //     'https://www.reddit.com/api/v1/access_token',
