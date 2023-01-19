@@ -44,7 +44,7 @@ module.exports = {
     mode: NODE_ENV ? NODE_ENV : 'development',
     entry: getEntry(),
     output: {
-        path: path.resolve(process.cwd(), '../build/client'),
+        path: path.resolve(process.cwd(), './build/client'),
         filename: 'client.js',
         publicPath: '/public/', 
     },
