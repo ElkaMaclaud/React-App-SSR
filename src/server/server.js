@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
 app.get('/profile', (req, res) => {
     axios.post(
         'https://www.reddit.com/api/v1/access_token',
-        `grant_type=authorization_code&code=${req.query.code}&redirect_uri=http://localhost:3000/profile`,
+        `grant_type=authorization_code&code=${req.query.code}&redirect_uri=https://react-app-ssr-production.up.railway.app/profile`,
         {
-            auth: { username: process.env.CLIENT_ID, password: 'LXXi58jznCTTW8NhK28DYyXNsPsX_w' },
+            auth: { username: process.env.CLIENT_ID, password: process.env.SECRET },
             headers: { 'Content-Type': 'application/x-www-form-urlencoded', }
         }
     )
