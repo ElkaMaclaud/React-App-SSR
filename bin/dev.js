@@ -44,10 +44,10 @@ compiler.run((err) => {
     });
 
     nodemon({
-        script: path.resolve(process.cwd(), '../build/server/server.js'),
+        script: path.resolve(process.cwd(), './build/server/server.js'),
         watch: [
-            path.resolve(process.cwd(), '../build/server'),
-            path.resolve(process.cwd(), '../build/client'),
+            path.resolve(process.cwd(), './build/server'),
+            path.resolve(process.cwd(), './build/client'),
         ]
     })
 })

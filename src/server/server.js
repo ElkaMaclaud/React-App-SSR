@@ -48,13 +48,3 @@ app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);
 });
 
-
-// axios.fetch(
-//     'https://www.reddit.com/api/v1/access_token',
-//     {   method: "POST",
-//         formData: `grant_type=authorization_code&code=${req.query.code}&redirect_uri=http://localhost:3000/auth`},
-//     {
-//         auth: { username: process.env.CLIENT_ID, password: '2onWsDXAe5oQJzRzkory-yOT2rWYeg' },
-//         headers: { 'Content-type': 'application/x-www-form-urlencoded' }
-//     }
-// )
