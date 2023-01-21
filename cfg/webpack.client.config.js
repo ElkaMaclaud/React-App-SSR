@@ -21,7 +21,7 @@ function setupDevtool() {
 }
 
 function getEntry() {
-    if (IS_PROD) {
+    if (!IS_DEV) {
         return [ path.resolve(__dirname, '../src/client/index.js') ]
         }
         return [ path.resolve(__dirname, '../src/client/index.js'),
