@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 app.get('/profile', (req, res) => {
     axios.post(
         'https://www.reddit.com/api/v1/access_token',
-        `grant_type=authorization_code&code=${req.query.code}&redirect_uri=https://react-app-ssr-production.up.railway.app/profile`,
+        `grant_type=authorization_code&code=${process.env.CLIENT_ID}&redirect_uri=https://react-app-ssr-production.up.railway.app/profile`,
         {
             auth: { username: process.env.CLIENT_ID, password: process.env.SECRET },
             headers: { 'Content-Type': 'application/x-www-form-urlencoded', }
