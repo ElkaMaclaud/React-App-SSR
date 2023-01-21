@@ -25,9 +25,9 @@ function getEntry() {
         return [ path.resolve(__dirname, '../src/client/index.js') ]
         }
         return [ path.resolve(__dirname, '../src/client/index.js'),
-        'webpack-hot-middleware/client?path=https://react-app-ssr-production.up.railway.app/public/__webpack_hmr']
+        'webpack-hot-middleware/client?path=http://localhost:3001/public/__webpack_hmr']
     }
-
+    
 module.exports = {
     target: "web",
     // watch: true,
