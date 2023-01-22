@@ -18,6 +18,9 @@ const store = createStore(rootReducer, composeWithDevTools(
 
 
 function AppComponent() {
+    // const url = new URL(window.location.href);
+    // console.log(url);
+
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {

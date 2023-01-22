@@ -58,12 +58,10 @@ export function CardsList() {
     }
   }, [bottomOfList.current, nextAfter, token]);
 
-  const title = ''
-  const card =  
-  <Card title={title}/>
-    const cards = [];
+  const title = '';
+  const cards = [];
   for (let i = 0; i < 10; i++) {
-    cards.push(card)
+    cards.push(<Card key={i} title={title}/>)
   }
   return (
      <ul className={styles.cardsList}>
