@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production CLIENT_ID=B0nx8Oag8CyJHXs_DHMlKw SECRET=P8tNnsh2k1hiyPPRFI8M3IbZOZxkEQ webpack --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production CLIENT_ID=O_l04gZysl5IQyLwjOJAUg SECRET=N0c5nvcPEAliNOm3h3F2a9U3d5ACTg webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development CLIENT_ID=HTWtjH1kBxmOarlapoMQow SECRET=LXXi58jznCTTW8NhK28DYyXNsPsX_w node ./bin/dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env node build/server/server.js"
