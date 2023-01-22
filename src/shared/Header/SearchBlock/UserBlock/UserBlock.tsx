@@ -10,12 +10,15 @@ interface IUserBlockProps {
   loading?: boolean;
 }
 
+const IS_DEV = process.env.NODE_ENV !== 'production';
+const REDIRECT_URI = IS_DEV ? 'http://localhost:3000/' : 'https://react-app-ssr-production.up.railway.app/';
+
 
 export function UserBlock({ avatarSrc, username, loading }: IUserBlockProps) {
   console.log(process.env.NODE_ENV, process.env.CLIENT_ID)
   return (
    <a 
-    href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=random_string&redirect_uri=https://react-app-ssr-production.up.railway.app/profile&duration=permanent&scope=identity read submit`}
+    href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=random_string&redirect_uri=${REDIRECT_URI}profile&duration=permanent&scope=identity read submit`}
     className={styles.userBox}
     >
     <div className={styles.avatarBox}>
